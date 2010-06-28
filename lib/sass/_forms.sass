@@ -1,0 +1,50 @@
+form
+  ul.checkboxes, ul.radios
+    margin: 0
+    li
+      +block
+      margin: 0 0 5px 0 
+  table tbody tr td .part
+    display: block
+    float: left
+    margin: 0 10px 10px 0
+    input, textarea, select
+      display: block
+    label
+      display: block
+      color: #444
+      font:
+        size: .9em
+        weight: normal
+      line-height: 1.5em
+      white-space: nowrap
+  .footer
+    background: #fff url($images_path + '/gradients/2x30_eee_to_fff.png') repeat-x left top
+    padding: 10px
+    margin: 10px 0 0 0
+    .cancel.button
+      background: none
+      .button_inner1
+        background: none
+        .button_inner2
+          background: none
+          .button_inner3
+            background: none
+            color: #641616
+    .secondary.submit
+      float: right
+      margin: 0 0 0 10px
+
+
+form.button-to, form.button-to > div
+  display: inline
+
+input
+  &.watermark
+    color: #999
+  &.currency
+    text-align: right
+  &.positive
+    border: 3px solid green
+  &.negative
+    border: 3px solid red

@@ -1,0 +1,61 @@
+table.data
+  border-bottom: 1px solid #ddd
+  thead
+    border-bottom: 1px solid #ddd
+    tr
+      background: #eee url($images_path + '/gradients/2x30_fff_to_eee.png') repeat-x left top
+      th
+        .th_inner1
+          display: block
+        a
+          display: block
+        a:hover
+          color: #009 !important
+      th.ascending, th.descending
+        .th_inner1
+          background:
+            repeat: no-repeat
+            position: right center
+          padding-right: 21px
+        a
+          color: #009 !important
+      th.ascending .th_inner1
+        background-image: url($images_path + '/icons/silk/bullet_arrow_up.png')
+      th.descending .th_inner1
+        background-image: url($images_path + '/icons/silk/bullet_arrow_down.png')
+  thead.with_super_header
+    background: #eee url($images_path + '/gradients/2x30_fff_to_eee.png') repeat-x left top
+    tr
+      background: none
+    tr.super_header
+      color: #666
+      th
+        border-right: 1px solid #ddd
+        font-weight: normal
+      th:last-child
+        border-right: none
+  tbody, tfoot
+    tr.even
+      background: #f5f5f5
+    tr.odd
+      background: #fff
+
+table.info
+  tr
+    border-bottom: 1px solid #ddd
+
+td, th
+  &.date
+    white-space: nowrap
+  &.currency
+    text-align: right
+  &.human_name
+    white-space: nowrap
+  &.bool
+    text-align: center
+  &.checkbox
+    text-align: center
+  &.actions
+    white-space: nowrap
+  &.table
+    padding: 0

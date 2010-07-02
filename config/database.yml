@@ -1,4 +1,4 @@
-development:
+development: &development
   adapter: postgresql
   encoding: unicode
   database: fiveminuteruby_development
@@ -6,10 +6,9 @@ development:
   username: austin_schneider
   password: 
 
-test:
-  adapter: postgresql
-  encoding: unicode
+test: &test
+  <<: *development
   database: fiveminuteruby_test
-  pool: 5
-  username: austin_schneider
-  password: 
+
+cucumber:
+  <<: *test

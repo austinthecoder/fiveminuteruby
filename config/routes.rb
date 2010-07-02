@@ -2,6 +2,8 @@ Fiveminuteruby::Application.routes.draw do |map|
   
   root :to => 'pages#index'
   
+  resources :screencasts
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

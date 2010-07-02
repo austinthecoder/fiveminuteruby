@@ -9,6 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100629055731) do
+
+  create_table "interested_users", :force => true do |t|
+    t.string "email"
+  end
+
+  add_index "interested_users", ["email"], :name => "index_interested_users_on_email"
+
+  create_table "screencasts", :force => true do |t|
+    t.integer "number"
+    t.string  "title"
+    t.string  "url"
+    t.text    "embed_html"
+  end
+
+  add_index "screencasts", ["number"], :name => "index_screencasts_on_number"
 
 end

@@ -11,4 +11,10 @@ group :test do
   gem 'rspec-expectations', '>= 2.0.0.beta.14'
   gem 'rspec-mocks', '>= 2.0.0.beta.14'
   gem 'rspec-rails', '>= 2.0.0.beta.14'
+  gem 'capybara', '>= 0.3.8'
+  gem 'database_cleaner', '>= 0.5.2'
+  gem 'cucumber-rails', '>= 0.3.2'
+  gem 'cucumber', '>= 0.8.3'
+  gem 'launchy', '>= 0.3.5'
+  gem 'factory_girl_rails', '>= 1.0'
 end

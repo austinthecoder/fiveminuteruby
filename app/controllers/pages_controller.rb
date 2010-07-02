@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   
-  def index
+  helper_method %w(screencasts)
+  
+  def screencasts
+    @screencasts ||= Screencast.all
   end
   
 end

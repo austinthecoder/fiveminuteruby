@@ -1,0 +1,9 @@
+<h2>Screencasts</h2>
+
+<div id="screencasts">
+  <% screencasts.each do |s| %>
+    <%= div_for s do %>
+      <h3><%= link_to s.title, s.url %></h3>
+    <% end %>
+  <% end %>
+</div>

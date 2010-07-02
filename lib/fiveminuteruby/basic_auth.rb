@@ -10,12 +10,12 @@ module Fiveminuteruby
       protected
       
       def authenticate?
-        Rails.env.staging?
+        Rails.env.staging? || Rails.env.development?
       end
       
       def authenticate
         authenticate_or_request_with_http_basic do |username, password|
-          username == CONFIG['http_auth_username'] && password == CONFIG['http_auth_password']
+          username == CONFIG[:http_auth_username] && password == CONFIG[:http_auth_password]
         end
       end
     end

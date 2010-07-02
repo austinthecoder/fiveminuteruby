@@ -545,10 +545,8 @@ body {
 
 /************************************************ */
 .screencast {
-  border-bottom: 1px dotted #555555;
+  border-bottom: 1px solid #555555;
   margin: 0 0 1em 0; }
-  .screencast .title {
-    margin: 0 0 0 0; }
   .screencast .description {
     margin: 0 0 0 20px; }
 

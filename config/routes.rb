@@ -4,6 +4,10 @@ Fiveminuteruby::Application.routes.draw do |map|
   
   resources :screencasts
   
+  %w(about).each do |page|
+    match page, :to => "pages##{page}", :as => page
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

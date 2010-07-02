@@ -13,25 +13,33 @@
         <h1><%= link_to image_tag("fiveminuteruby_logo.png"), root_path %></h1>
         <div class="clear"></div>
       </div>
-      <!--div id="menu">
-        <ul>
-          <%# main_menu.each do |item| %>
-            <li><%# link_to item.title, item.url %></li>
-          <%# end %>
-        </ul>
-        <div class="clear"></div>
-      </div-->
-      <div id="main">
-        <div id="messages">
-          <% if has_msgs? %>
-            <ul class="messages">
-              <% msgs.each do |m| %>
-                <li class="<%= [m.tone, 'message'].compact.join(' ') %>"><%= m %></li>
-              <% end %>
+      <div id="content">
+        <div id="sidebar">
+          <div class="sidebar_inner">
+            <ul>
+              <li><%= link_to 'Screencasts', root_url %></li>
+              <li><%= link_to 'About this site', about_path %></li>
             </ul>
-          <% end %>
+          </div>
         </div>
-        <%= yield %>
+        <div id="main">
+          <div class="main_inner">
+            <div id="messages">
+              <% if has_msgs? %>
+                <ul class="messages">
+                  <% msgs.each do |m| %>
+                    <li class="<%= [m.tone, 'message'].compact.join(' ') %>"><%= m %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </div>
+            <%= yield %>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div id="footer">
+        <p>&copy; <%= Time.zone.now.year %> Austin Schneider. All rights reserved.</p>
       </div>
     </div>
     <%= javascript_tag do %>

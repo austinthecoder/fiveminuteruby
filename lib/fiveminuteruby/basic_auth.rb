@@ -10,7 +10,7 @@ module Fiveminuteruby
       protected
       
       def authenticate?
-        Rails.env.staging? || Rails.env.development?
+        Rails.env.staging?
       end
       
       def authenticate

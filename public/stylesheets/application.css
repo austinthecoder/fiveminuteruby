@@ -503,7 +503,6 @@ td.actions, th.actions {
 td.table, th.table {
   padding: 0; }
 
-@import url(boxes.css);
 /* #version 9.1.9 */
 .messages {
   background: none;
@@ -532,7 +531,6 @@ td.table, th.table {
   .messages .message.error {
     background: #5d3433; }
 
-@import url(modal.css);
 /************************************************ */
 a {
   color: #ccccff;
@@ -548,8 +546,6 @@ body {
   margin: 0 0 40px 0; }
   .screencast .title {
     margin: 0 0 0 0; }
-  .screencast .description {
-    margin: 0 0 0 20px; }
 
 /************************************************ */
 #container {

@@ -1,6 +1,6 @@
 class ScreencastsController < ApplicationController
   
-  helper_method %w(screencast)
+  helper_method %w(screencast screencasts)
   
   # def index
   #   respond_to do |f|
@@ -12,6 +12,10 @@ class ScreencastsController < ApplicationController
   
   def screencast
     @screencast ||= Screencast.find(params[:id])
+  end
+  
+  def screencasts
+    @screencasts ||= Screencast.order("screencasts.created_at DESC")
   end
   
 end

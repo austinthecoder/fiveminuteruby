@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100702054555) do
+ActiveRecord::Schema.define(:version => 20100705060038) do
 
   create_table "interested_users", :force => true do |t|
     t.string "email"
@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(:version => 20100702054555) do
   add_index "interested_users", ["email"], :name => "index_interested_users_on_email"
 
   create_table "screencasts", :force => true do |t|
-    t.integer "number"
-    t.string  "title"
-    t.string  "url"
-    t.text    "description"
+    t.integer  "number"
+    t.string   "title"
+    t.string   "url"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "screencasts", ["number"], :name => "index_screencasts_on_number"

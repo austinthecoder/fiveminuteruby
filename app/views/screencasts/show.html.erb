@@ -1,4 +1,5 @@
 <%= div_for screencast do %>
-  <h3><%= screencast.title %></h3>
-  <div><%= screencast.embed_html.html_safe %></div>
+  <h3 class="title">#<%= screencast.number %> <%= screencast.title %></h3>
+  <div class="description"><%= simple_format screencast.description %></div>
+  <h3><strong><%= link_to 'Watch Screencast', screencast.url %></strong></h3>
 <% end %>

@@ -3,7 +3,7 @@
 <div id="screencasts">
   <% screencasts.each do |s| %>
     <%= div_for s do %>
-      <h3 class="title"><%= link_to "##{s.number} #{s.title}", s.url %></h3>
+      <h3 class="title"><%= link_to "##{s.number} #{s.title}", screencast_path(s) %></h3>
       <div class="description"><%= simple_format s.description %></div>
     <% end %>
   <% end %>

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   
-  include Fiveminuteruby::BasicAuth
+  include Fiveminuteruby::BasicAuth, Fiveminuteruby::EnsureWww
   
   protect_from_forgery
   

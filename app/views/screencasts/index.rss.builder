@@ -1,7 +1,7 @@
 xml.instruct! :xml, :version => "1.0" 
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Screencasts"
+    xml.title "FiveMinuteRuby Screencasts"
     xml.description "New FiveMinuteRuby screencasts"
     xml.link root_url
 

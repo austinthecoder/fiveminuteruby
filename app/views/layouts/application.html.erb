@@ -5,6 +5,9 @@
     <title><%= title %></title>
     <%= stylesheet_link_tag :all %>
     <%= javascript_include_tag :all %>
+    <%= javascript_tag do %>
+      var disqus_developer = <%= Rails.env.production? ? 0 : 1 %>;
+    <% end %>
     <%= csrf_meta_tag %>
   </head>
   <body>
@@ -44,6 +47,7 @@
       </div>
     </div>
     <%= javascript_tag do %>
+      <%= yield :js %>
       <% if Rails.env.production? %>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-17199780-1']);

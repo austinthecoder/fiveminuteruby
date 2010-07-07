@@ -561,17 +561,44 @@ body {
   #header h1 a {
     display: block; }
 
-#content #sidebar {
-  float: right;
-  width: 320px; }
-  #content #sidebar .sidebar_inner {
-    background: #444444;
-    padding: 20px 40px; }
-#content #main {
-  float: left;
-  width: 640px; }
-  #content #main .main_inner {
-    padding: 0 40px 0 0; }
+#content {
+  background: url("../../../images/sidebar_bg.png") repeat-y right top; }
+  #content #sidebar {
+    float: right;
+    width: 320px; }
+    #content #sidebar .sidebar_inner {
+      padding: 20px 30px; }
+    #content #sidebar #menu ul {
+      background: none;
+      border: none;
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin: 0; }
+      #content #sidebar #menu ul li {
+        background: none;
+        border: none;
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #555555; }
+        #content #sidebar #menu ul li a {
+          background: none;
+          border: none;
+          display: block;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          padding: 5px 10px; }
+        #content #sidebar #menu ul li a:hover {
+          background: #555555; }
+  #content #main {
+    float: left;
+    width: 640px; }
+    #content #main .main_inner {
+      padding: 0 40px 0 0; }
 
 #footer {
   border-top: 1px dotted #555555;

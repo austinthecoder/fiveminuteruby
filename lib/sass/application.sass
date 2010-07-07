@@ -42,12 +42,24 @@ body
       display: block
 
 #content
+  background: url($images_path + '/sidebar_bg.png') repeat-y right top
   #sidebar
     float: right
     width: 320px
     .sidebar_inner
-      background: #444
-      padding: 20px 40px
+      padding: 20px 30px
+    #menu
+      ul
+        +block
+        margin: 0
+        li
+          +block
+          border-bottom: 1px solid #555
+          a
+            +block
+            padding: 5px 10px
+          a:hover
+            background: #555
   #main
     float: left
     width: 640px

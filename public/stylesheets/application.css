@@ -569,13 +569,7 @@ body {
     #content #sidebar .sidebar_inner {
       padding: 20px 30px; }
     #content #sidebar #menu ul {
-      background: none;
-      border: none;
-      display: block;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      margin: 0; }
+      margin: 0 0 2em 0; }
       #content #sidebar #menu ul li {
         background: none;
         border: none;
@@ -591,9 +585,11 @@ body {
           list-style: none;
           margin: 0;
           padding: 0;
-          padding: 5px 10px; }
-        #content #sidebar #menu ul li a:hover {
-          background: #555555; }
+          padding: 5px 0; }
+      #content #sidebar #menu ul li.rss_feed {
+        background: url("../../../images/icons/social_networking_iconpack/rss_16.png") no-repeat left center; }
+        #content #sidebar #menu ul li.rss_feed a {
+          padding-left: 21px; }
   #content #main {
     float: left;
     width: 640px; }

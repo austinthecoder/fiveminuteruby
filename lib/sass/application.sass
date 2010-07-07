@@ -50,16 +50,17 @@ body
       padding: 20px 30px
     #menu
       ul
-        +block
-        margin: 0
+        margin: 0 0 2em 0
         li
           +block
           border-bottom: 1px solid #555
           a
             +block
-            padding: 5px 10px
-          a:hover
-            background: #555
+            padding: 5px 0
+        li.rss_feed
+          background: url($images_path + '/icons/social_networking_iconpack/rss_16.png') no-repeat left center
+          a
+            padding-left: 21px
   #main
     float: left
     width: 640px

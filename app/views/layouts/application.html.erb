@@ -23,11 +23,17 @@
             <div id="menu">
               <ul>
                 <li><%= link_to 'Screencasts', root_url %></li>
-                <li><%= link_to 'RSS Feed', feed_url %></li>
+                <li class="rss_feed"><%= link_to 'RSS Feed', feed_url %></li>
                 <li><%= link_to 'About this site', about_path %></li>
                 <li><%= link_to 'Follow FiveMinuteRuby on Twitter', "http://twitter.com/fiveminuteruby" %></li>
               </ul>
             </div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="EYHHN7RMWLQKE">
+              <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
           </div>
         </div>
         <div id="main">

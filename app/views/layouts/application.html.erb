@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-type">
-    <meta name="google-site-verification" content="a_zoarsMpsPYWRu5z2hwh8iYDqeRuymVsAt1HolPxcw" />
+    <%= meta_tags %>
     <title><%= title %></title>
-    <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag :all %>
-    <%= javascript_tag do %>
-      var disqus_developer = <%= Rails.env.production? ? 0 : 1 %>;
-    <% end %>
+    <%= stylesheet_link_tag stylesheets %>
+    <%= javascript_include_tag javascripts %>
     <%= csrf_meta_tag %>
   </head>
   <body>
@@ -28,12 +24,8 @@
                 <li><%= link_to 'Follow FiveMinuteRuby on Twitter', "http://twitter.com/fiveminuteruby" %></li>
               </ul>
             </div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="EYHHN7RMWLQKE">
-              <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
+            <%= render 'shared/skribit' %>
+            <%= render 'shared/donate_button' %>
           </div>
         </div>
         <div id="main">

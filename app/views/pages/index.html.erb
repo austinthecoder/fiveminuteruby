@@ -5,7 +5,6 @@
     <%= div_for s do %>
       <h3 class="title"><%= link_to "##{s.number} #{s.title}", screencast_path(s) %></h3>
       <div class="date"><%= time_ago_in_words(s.created_at) %> ago</div>
-      <div class="clear"></div>
       <div class="description"><%= simple_format s.description %></div>
     <% end %>
   <% end %>

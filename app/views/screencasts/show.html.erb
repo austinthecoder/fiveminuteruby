@@ -2,6 +2,9 @@
   <h3 class="title">#<%= screencast.number %> <%= screencast.title %></h3>
   <div class="description"><%= simple_format screencast.description %></div>
   <h3><strong><%= link_to 'Watch Screencast', screencast.url %></strong></h3>
+  <% if screencast.youtube_url %>
+    <p><strong><%= link_to 'Watch Smaller Version', screencast.youtube_url %> (for iPod/iPhone)</strong></p>
+  <% end %>
 <% end %>
 
 <div class="comments">

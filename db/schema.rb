@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100705060038) do
+ActiveRecord::Schema.define(:version => 20100713044856) do
 
   create_table "interested_users", :force => true do |t|
     t.string "email"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20100705060038) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "youtube_url"
   end
 
   add_index "screencasts", ["number"], :name => "index_screencasts_on_number"

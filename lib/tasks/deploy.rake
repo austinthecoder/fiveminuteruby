@@ -1,13 +1,11 @@
+require "#{Rails.root}/lib/fiveminuteruby/deployer"
+
 namespace :deploy do
   task :staging do
-    puts "Deployment to staging started"
-    system "git push staging master"
-    puts "Deployment complete"
+    Fiveminuteruby::Deployer.deploy_without_tests_checking('staging')
   end
   
   task :production do
-    puts "Deployment to production started"
-    system "git push production master"
-    puts "Deployment complete"
+    Fiveminuteruby::Deployer.deploy('production')
   end
 end

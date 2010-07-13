@@ -542,13 +542,9 @@ body {
   font-size: 13px; }
 
 h1, h2, h3 {
-  font-family: "Droid Sans";
-  visibility: hidden; }
+  font-family: "Droid Sans", "Lucida Grande", sans-serif; }
 
 /************************************************ */
-.wf-active h1, .wf-active h2, .wf-active h3 {
-  visibility: visible; }
-
 .screencast {
   margin: 0 0 40px 0; }
   .screencast .title {

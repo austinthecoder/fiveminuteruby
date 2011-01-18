@@ -1,0 +1,19 @@
+development: &development
+  http_auth_username: <user>
+  http_auth_password: <pass>
+  tld_size: 1
+
+test:
+  <<: *development
+  tld_size: 0
+
+cucumber:
+  <<: *development
+  tld_size: 0
+
+staging:
+  <<: *development
+  tld_size: 2
+
+production:
+  <<: *development

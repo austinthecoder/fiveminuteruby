@@ -1,6 +1,6 @@
 development: &development
-  http_auth_username: <user>
-  http_auth_password: <pass>
+  http_auth_username: <username>
+  http_auth_password: <password>
   tld_size: 1
 
 test:
